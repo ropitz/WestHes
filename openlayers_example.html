@@ -11,7 +11,7 @@
     <div id="map" class="map"></div>
     <div id="info">&nbsp;</div>
     <script>
-      var projection = ol.proj.get('EPSG:3857');
+      var projection = ol.proj.get('EPSG:3236');
 
       var raster = new ol.layer.Tile({
         source: new ol.source.BingMaps({
@@ -22,7 +22,7 @@
 
       var vector = new ol.layer.Vector({
         source: new ol.source.Vector({
-          url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
+          url: 'https://www.dropbox.com/s/nlg3abu62tc4ge5/WestHes.kml?dl=0',
           format: new ol.format.KML()
         })
       });
@@ -31,7 +31,7 @@
         layers: [raster, vector],
         target: document.getElementById('map'),
         view: new ol.View({
-          center: [876970.8463461736, 5859807.853963373],
+          center: [0,54],
           projection: projection,
           zoom: 10
         })
